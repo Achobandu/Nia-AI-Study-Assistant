@@ -1,0 +1,76 @@
+/* styles/Header.module.css */
+
+.header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.profileIcon {
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+.avatarIcon{
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 50%;
+}
+
+.logoutBtn {
+  background-color: #ff3b30;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logoutBtn:hover {
+  background-color: #ff1a1a;
+}
+
+.customAvatar {
+  width: 30px !important;  /* Force the width */
+  height: 30px !important; /* Force the height */
+  border-radius: 50% !important; /* Ensure it remains circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customAvatar svg {
+  width: 100% !important; /* Override the width */
+  height: 100% !important; /* Override the height */
+}
+
+.customAvatar img {
+  width: 100% !important; /* Ensure the image takes full width */
+  height: 100% !important; /* Ensure the image takes full height */
+  object-fit: cover; /* Ensure image is not distorted */
+}
