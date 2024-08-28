@@ -36,7 +36,11 @@ const Dashboard = () => {
           <li>2:00 PM - Biology: Photosynthesis</li>
         </ul>
       </div>
-      <button className={styles.startStudyingBtn}>Start Studying</button>
+      <button className={styles.startStudyingBtn}>
+        <Link href="/courses" passHref>
+          Start Studying
+        </Link>
+      </button>
     </div>
   );
 };
