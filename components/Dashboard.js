@@ -3,8 +3,11 @@
 import React from 'react';
 import styles from '../styles/Dashboard.module.css'; // Import the CSS module
 import Link from 'next/link';
+import { courses } from '../app/courses/page.js';
 
 const Dashboard = () => {
+  const coursesEnrolled = courses.length;
+
   return (
     <div className={styles.dashboard}>
       <div className={styles.welcomeMessage}>
@@ -14,7 +17,7 @@ const Dashboard = () => {
         <div className={styles.statCard}>
           <Link href="/courses" passHref>
             <h3>Courses Enrolled</h3>
-            <p>5</p>
+            <p>{coursesEnrolled}</p>
           </Link>
         </div>
         <div className={styles.statCard}>
