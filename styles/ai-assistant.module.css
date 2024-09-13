@@ -1,0 +1,76 @@
+.aiAssistantContainer {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .chatSection {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .chatMessages {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+  }
+  
+  .userMessage {
+    background-color: #e0f7fa;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-align: right;
+  }
+  
+  .aiResponse {
+    background-color: #fce4ec;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .chatInputForm {
+    display: flex;
+  }
+  
+  .chatInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .chatSubmitButton {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .studyPlanner {
+    margin-top: 20px;
+  }
+  
+  .studyPlanner h2 {
+    margin-bottom: 10px;
+  }
+  
+  .studyPlanner ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .studyPlanner li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  

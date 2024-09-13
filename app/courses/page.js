@@ -2,9 +2,9 @@
 import styles from '../../styles/courses.module.css';
 
 export const courses = [
-  { id: 1, name: 'MTH 130', instructor: 'Dr. Tester', assignment: Date(2024, 12, 13, 11, 59, 59) },
-  { id: 2, name: 'CIT 340', instructor: 'Dr. Constant', assignment: Date('Dec 16, 2024 11:59:59') },
-  { id: 3, name: 'MIS 699', instructor: 'Dr. Hulabaloo', assignment: Date('Dec 25, 2024 11:59:59') },
+  { id: 1, name: 'MTH 130', instructor: 'Dr. Tester', assignment: new Date(2024, 11, 13, 11, 59, 59).toLocaleString() },
+  { id: 2, name: 'CIT 340', instructor: 'Dr. Constant', assignment: new Date('Dec 16, 2024 11:59:59').toLocaleString() },
+  { id: 3, name: 'MIS 699', instructor: 'Dr. Hulabaloo', assignment: new Date('Dec 25, 2024 11:59:59').toLocaleString() },
 ];
 
 const Courses = () => {
@@ -20,12 +20,12 @@ const Courses = () => {
       </div>
       <div className={styles.courseList}>
         {courses.map((course) => (
-          <div key={courses.id} className={styles.courseCard}>
+          <div key={course.id} className={styles.courseCard}>
             <h3>{course.name}</h3>
             <p><b>Instructor:</b> {course.instructor}</p>
             <p><b>Assignment Due: </b> {course.assignment}</p>
-          </div>)
-        )}
+          </div>
+        ))}
       </div>
       <button className={styles.addCourseBtn}>Add New Course</button>
     </div>
