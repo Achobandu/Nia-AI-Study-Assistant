@@ -1,11 +1,24 @@
 // components/Dashboard.js
+'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/Dashboard.module.css'; // Import the CSS module
 import Link from 'next/link';
-import { courses } from '../app/courses/page.js';
 
 const Dashboard = () => {
+  const [courses, setCourses] = useState([]);
+
+  // Simulate fetching courses from a local source or an API
+  useEffect(() => {
+    // Import courses dynamically (in real cases, this might be an API call)
+    const fetchedCourses = [
+      { id: 1, name: 'MTH 130', instructor: 'Dr. Tester', assignment: new Date(2024, 11, 13, 11, 59, 59) },
+      { id: 2, name: 'CIT 340', instructor: 'Dr. Constant', assignment: new Date('Dec 16, 2024 11:59:59') },
+      { id: 3, name: 'MIS 699', instructor: 'Dr. Hulabaloo', assignment: new Date('Dec 25, 2024 11:59:59') },
+    ];
+    setCourses(fetchedCourses);
+  }, []);
+
   const coursesEnrolled = courses.length;
 
   return (

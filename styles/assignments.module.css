@@ -1,76 +1,57 @@
-.courseDash {
+.assignmentsPage {
     padding: 20px;
     font-family: 'Arial', sans-serif;
   }
   
-  .courseHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5rem;
-  }
-  
-  .addPlusSign {
-    font-size: 2rem;
-    color: white;
-    background-color: #1e90ff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .courseList {
+  .assignmentList {
     display: grid;
-    gap: 15px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
   }
   
-  .courseCard {
-    background-color: #f9f9f9;
-    padding: 20px;
+  .assignmentCard {
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
+    padding: 15px;
   }
   
   .cardActions {
     display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+    justify-content: space-between;
     margin-top: 10px;
   }
   
   .editBtn {
-    background-color: #ffc107;
     padding: 5px 10px;
+    background-color: #ffc107;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
   }
   
   .deleteBtn {
-    background-color: #dc3545;
     padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .addCourseBtn {
-    padding: 10px 15px;
-    background-color: #28a745;
+    background-color: #dc3545;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
   }
   
-  .addCourseBtn:hover {
-    background-color: #218838;
+  .addAssignmentBtn {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .addAssignmentBtn:hover {
+    background-color: #1c7ed6;
   }
   
   .popupOverlay {
@@ -87,30 +68,23 @@
   }
   
   .popupContent {
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     width: 400px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
-  .addCourseForm {
+  .addAssignmentForm {
     display: flex;
     flex-direction: column;
-    gap: 10px;
   }
   
-  .addCourseForm input {
+  .addAssignmentForm input {
+    margin-bottom: 15px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-  }
-
-  .addCourseForm select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
   }
   
   .formActions {
@@ -119,9 +93,9 @@
   }
   
   .formActions button {
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
   }
   
