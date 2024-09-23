@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Nia AI - AI-Powered Study Assistant
 
-First, run the development server:
+Nia AI is an AI-powered study assistant designed to help students manage their courses, assignments, and study plans. The assistant provides an intuitive interface where students can chat with an AI assistant, track their courses, view upcoming assignments, and stay organized with a personalized study planner.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **AI Study Assistant**: A chat interface where students can ask questions or get study tips.
+- **Courses Dashboard**: View all enrolled courses, instructors, and assignment deadlines.
+- **Assignments Management**: Track upcoming assignments, add new ones, and edit or delete existing assignments.
+- **Study Planner**: Organized planner to view your course schedule and upcoming assignment deadlines.
+- **Authentication**: Simple authentication to track user progress and saved data.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js (App Directory)**: Framework for building the app using server-side rendering and client-side features.
+- **React**: For creating reusable components and managing the UI.
+- **CSS Modules**: Used for modular and scoped styling.
+- **AWS Amplify**: For backend services like authentication and storage.
+- **Local Storage**: Saving chat history and other small persistent data on the user's device.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To run this project locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**:
+   \`\`\`bash
+   git clone https://github.com/yourusername/nia-ai.git
+   \`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Navigate to the project directory**:
+   \`\`\`bash
+   cd nia-ai
+   \`\`\`
 
-## Deploy on Vercel
+3. **Install dependencies**:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the development server**:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Project Structure
+
+\`\`\`
+nia-ai/
+│
+├── app/
+│   ├── ai-assistant/
+│   │   └── page.js         # AI Assistant Page
+│   ├── courses/
+│   │   └── page.js         # Courses Page
+│   ├── assignments/
+│   │   └── page.js         # Assignments Page
+│   ├── layout-client.js    # Client layout with Header, Sidebar, and Chatbox
+│   └── layout.js           # Main layout file
+│
+├── components/
+│   ├── Header.js           # Header Component
+│   ├── Sidebar.js          # Sidebar Component
+│   ├── Chatbox.js          # Chatbox for AI Assistant
+│   └── Dashboard.js        # Dashboard with overview of courses and assignments
+│
+├── styles/
+│   ├── globals.css         # Global CSS styles
+│   ├── ai-assistant.module.css # Styles for AI Assistant
+│   └── courses.module.css  # Styles for Courses page
+│
+├── public/
+│   └── ...                 # Static assets like images, icons, etc.
+│
+├── package.json            # Project configuration and dependencies
+└── README.md               # Project readme (this file)
+\`\`\`
+
+## Usage
+
+### AI Study Assistant
+
+The AI assistant allows students to chat and ask questions related to their studies. You can type your question in the chat input box, and the assistant will generate a response using AI technologies like Amazon Comprehend.
+
+### Course Management
+
+The **Courses** page lists all your enrolled courses, with the ability to add new courses or remove existing ones via a simple pop-up form.
+
+### Assignment Management
+
+The **Assignments** page allows students to track their upcoming assignments, add new assignments, or remove/edit existing ones. Assignments are linked to the enrolled courses.
+
+### Study Planner
+
+The study planner organizes your schedule, showing you upcoming assignments and important deadlines for each course.
+
+## Upcoming Features
+
+- **Study Streak Tracking**: Keep track of how long you've been consistently studying.
+- **Advanced AI Integration**: A more interactive and intelligent AI assistant.
+- **Notifications**: Alerts for upcoming assignment deadlines and study reminders.
+- **Calendar View**: A full calendar view for better visualization of assignments and course schedules.
+
+## Contributing
+
+Feel free to contribute to this project by submitting a pull request. Here's how you can contribute:
+
+1. Fork the repository.
+2. Create a new branch (\`git checkout -b feature/your-feature-name\`).
+3. Make your changes and commit them (\`git commit -m 'Add some feature'\`).
+4. Push to the branch (\`git push origin feature/your-feature-name\`).
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- **Email**: ifeanyiachobandu@gmail.com
+- **GitHub**: [Achobandu](https://github.com/achobandu)
