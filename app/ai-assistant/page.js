@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/ai-assistant.module.css';
 
-const AIAssistant = ({ courses = [], assignments = [] }) => { // Ensure default value for courses and assignments
+const AIAssistant = ({ courses = [], assignments = [] }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
@@ -21,15 +21,27 @@ const AIAssistant = ({ courses = [], assignments = [] }) => { // Ensure default 
     localStorage.setItem('aiChatMessages', JSON.stringify(messages));
   }, [messages]);
 
-  const handleSendMessage = (e) => {
+  const handleSendMessage = async (e) => {
     e.preventDefault();
     if (input.trim() !== '') {
-      setMessages([...messages, { role: 'user', text: input }]);
+      const newMessage = { role: 'user', text: input };
+      setMessages([...messages, newMessage]);
       setInput('');
 
-      // Call AI service for response (using Amazon Comprehend / NLTK in production)
-      const aiResponse = "AI-generated response (using Amazon Comprehend)";
-      setMessages((prev) => [...prev, { role: 'ai', text: aiResponse }]);
+      // Call Next.js API route
+      try {
+        const response = await fetch('/api/ai-assistant', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: input }),
+        });
+
+        const data = await response.json();
+        setMessages((prev) => [...prev, { role: 'ai', text: data.aiResponse }]);
+      } catch (error) {
+        console.error('Error communicating with AI service:', error);
+        setMessages((prev) => [...prev, { role: 'ai', text: 'There was an error. Please try again.' }]);
+      }
     }
   };
 
@@ -68,7 +80,7 @@ const AIAssistant = ({ courses = [], assignments = [] }) => { // Ensure default 
               </li>
             ))
           ) : (
-            <li>No courses available</li> // Provide fallback message if no courses are available
+            <li>No courses available</li>
           )}
         </ul>
       </div>
